@@ -1,0 +1,30 @@
+.pagination-wrapper {
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+
+.pagination-page-btn {
+  display: inline-block;
+  color: blue;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.pagination-page-btn:hover {
+  transform: scale(1.2);
+}
+.pagination-page-btn:hover.active-page,
+.pagination-page-btn:hover.no-active {
+  transform: none;
+  cursor: default;
+}
+
+.active-page {
+  color: darkorange;
+}
+.no-active {
+  color: gray;
+}

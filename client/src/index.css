@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  border: 1px solid black;
+}
+
+header {
+  background-color: aqua;
+}
+
+.page-title {
+  color: blue;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
