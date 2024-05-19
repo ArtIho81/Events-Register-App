@@ -2,10 +2,12 @@ import participantsService from "../services/participants.service.js";
 
 class ParticipantsController {
   getParticipants = async (req, res) => {
-    const { eventId } = req.params;
     try {
+      const { eventId } = req.params;
+      const searchQuery  = req.query;
       const eventParticipants = await participantsService.getEventParticipants(
-        eventId
+        eventId,
+        searchQuery
       );
       res.status(200).json(eventParticipants);
     } catch (e) {

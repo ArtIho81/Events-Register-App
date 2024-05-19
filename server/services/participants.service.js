@@ -3,9 +3,16 @@ import eventsService from "../services/events.service.js";
 import sourcesService from "./sources.service.js";
 
 class ParticipantsService {
-  getEventParticipants = async (eventId) => {
+  getEventParticipants = async (eventId, searchQuery) => {
+    console.log(eventId, searchQuery)
+    const whereClause =
+    !searchQuery.searchBy || !searchQuery.search
+    ? undefined
+    : { [searchQuery.searchBy]: searchQuery.search };
     const event = await eventsService.getEventById(eventId);
-    const participants = await event.getParticipants();
+    const participants = await event.getParticipants({
+      where: whereClause,
+    });
     return { event: event.title, participants };
   };
 

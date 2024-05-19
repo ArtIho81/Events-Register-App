@@ -43,9 +43,9 @@ export const EventRegistrationPage = () => {
     <>
       <h1 className="page-title">Event registration</h1>
       <form className="reg-form">
-        <Input {...inputs.name} {...name} />
-        <Input {...inputs.email} {...email} />
-        <Input {...inputs.birthDate} {...birthDate} />
+        <Input className="input-wrapper" {...inputs.name} {...name} />
+        <Input className="input-wrapper" {...inputs.email} {...email} />
+        <Input className="input-wrapper" {...inputs.birthDate} {...birthDate} />
         <div>
           <p className="input-label">Where did you hear about this event?</p>
           <div className="radio-wrapper">
